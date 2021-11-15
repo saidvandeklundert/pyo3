@@ -79,7 +79,7 @@ fn count_occurences(contents: &str, needle: &str) -> usize {
     let mut count = 0;
     for line in contents.lines() {
         for word in line.split(" ") {
-            if word == needle || word == format!("{}", needle) {
+            if word == needle || word == format!("{}.", needle) {
                 count += 1;
             }
         }

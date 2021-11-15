@@ -57,7 +57,8 @@ def count_occurences(contents: str, needle: str) -> int:
 
 
 text = (
-    """🐍 searches through the words. Here are some additional words for 🐍.\n""" * 1000
+    """🐍 searches through the words. Here are some additional words for 🐍.\nSome words\n"""
+    * 1000
 )
 
 

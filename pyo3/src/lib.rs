@@ -48,7 +48,7 @@ fn word_printer(mut word: String, n: isize, reverse: bool, uppercase: bool) {
 
 /// Print every item of a list to console:
 #[pyfunction]
-fn list_printer(a: Vec<String>) {
+fn vector_printer(a: Vec<String>) {
     for string in a {
         println!("{}", string)
     }
@@ -215,7 +215,7 @@ fn rust(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(multiply, m)?)?;
     m.add_function(wrap_pyfunction!(list_sum, m)?)?;
     m.add_function(wrap_pyfunction!(word_printer, m)?)?;
-    m.add_function(wrap_pyfunction!(list_printer, m)?)?;
+    m.add_function(wrap_pyfunction!(vector_printer, m)?)?;
     m.add_function(wrap_pyfunction!(dict_printer, m)?)?;
     m.add_function(wrap_pyfunction!(array_printer, m)?)?;
     m.add_function(wrap_pyfunction!(count_occurences, m)?)?;

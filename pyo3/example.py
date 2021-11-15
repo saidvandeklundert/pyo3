@@ -18,7 +18,7 @@ rust.word_printer("eyb", 3, True, False)
 
 # print a list of strings to console
 a_list = ["one", "two", "three"]
-rust.list_printer(a_list)
+rust.vector_printer(a_list)
 
 another_list = ["1", "2", "3", "4", "5", "6", "7", "8"]
 rust.array_printer(another_list)

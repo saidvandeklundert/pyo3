@@ -1,4 +1,5 @@
 import rust
+from timeit import default_timer as timer
 from pydantic import BaseModel
 
 # multiply
@@ -64,11 +65,15 @@ print("count_occurences for 'words' in Python:", res)
 rust_res = rust.count_occurences(text, "words")
 print("count_occurences for 'words' in Rust:", rust_res)
 
+start = timer()
 res = count_occurences(text, "🐍")
-print("count_occurences for '🐍' in Python:", res)
+elapsed = round(timer() - start, 10)
+print(f"count_occurences for '🐍' in Python took {elapsed}. Result: {res}")
 
+start = timer()
 rust_res = rust.count_occurences(text, "🐍")
-print("count_occurences for '🐍' in Rust:", rust_res)
+elapsed = round(timer() - start, 10)
+print(f"count_occurences for '🐍' in Python took {elapsed}. Result: {rust_res}")
 
 # Calculating fibonacci
 from fib import get_fibonacci
@@ -79,7 +84,6 @@ for i in range(10):
     res_rust = rust.get_fibonacci(i)
     print(f"number{i}:\t{res_python}\tand in Rust: {res_rust}")
 
-from timeit import default_timer as timer
 
 py_start = timer()
 for i in range(999):

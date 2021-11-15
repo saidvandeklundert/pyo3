@@ -44,12 +44,7 @@ except TypeError as e:
     print(f"Caught a type error: {e}")
 
 # count occurrences of a word in a string:
-
-
 def count_occurences(contents: str, needle: str) -> int:
-    """Example provided by David, core maintainer of pyo3:
-    https://youtu.be/-XyWG_klSAw?t=1558
-    """
     total = 0
     for line in contents.splitlines():
         for word in line.split(" "):
@@ -58,18 +53,18 @@ def count_occurences(contents: str, needle: str) -> int:
     return total
 
 
-text = """🐍 words, words, words, words and more words. 🐍"""
+text = """🐍 searches through the words. Here are some additional words for 🐍.""" * 1000
 res = count_occurences(text, "words")
-print("count_occurences for words in Python", res)
+print("count_occurences for 'words' in Python:", res)
 
 rust_res = rust.count_occurences(text, "words")
-print("count_occurences for words in Rust", rust_res)
+print("count_occurences for 'words' in Rust:", rust_res)
 
 res = count_occurences(text, "🐍")
-print("count_occurences for 🐍 in Rust", res)
+print("count_occurences for '🐍' in Python:", res)
 
 rust_res = rust.count_occurences(text, "🐍")
-print("count_occurences for 🐍 in Rust", rust_res)
+print("count_occurences for '🐍' in Rust:", rust_res)
 
 # Calculating fibonacci
 from fib import get_fibonacci

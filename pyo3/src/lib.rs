@@ -198,7 +198,7 @@ impl RustStruct {
         }
     }
     pub fn extend_vector(&mut self, extension: Vec<u8>) {
-        println!("{}", self.data);
+        println!("Extending the vector.");
         for i in extension {
             self.vector.push(i);
         }

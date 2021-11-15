@@ -10,19 +10,20 @@ print(result)
 result = rust.list_sum([10, 10, 10, 10, 10])
 print(result)
 
+# Working with different types:
+
 # word printer:
-# word_printer(mut word: String, n: isize, reverse: bool, uppercase: bool)
 rust.word_printer("hello", 3, False, True)
 rust.word_printer("eyb", 3, True, False)
 
-# Working with different types:
-
+# print a list of strings to console
 a_list = ["one", "two", "three"]
 rust.list_printer(a_list)
 
 another_list = ["1", "2", "3", "4", "5", "6", "7", "8"]
 rust.array_printer(another_list)
 
+# print a dictionary to console:
 a_dict = {
     "key 1": "value 1",
     "key 2": "value 2",
@@ -43,6 +44,7 @@ try:
     rust.dict_printer({"a": 1, "b": 2})
 except TypeError as e:
     print(f"Caught a type error: {e}")
+
 
 # count occurrences of a word in a string:
 def count_occurences(contents: str, needle: str) -> int:
@@ -99,10 +101,12 @@ print("Calculating the 150th fibonacci number 1000 times.")
 print(f"Python took {py_elapsed} seconds and got:\t{py_res}.")
 print(f"Rust took {ru_elapsed} seconds and got:\t{ru_res}.")
 
-# Using RustStruct
-x = rust.RustStruct(data="some data", vector=[255, 255, 255])
-x.extend_vector([1, 1, 1, 1])
-x.printer()
+# Using a struct that is defined in Rust, a struct called RustStruct:
+rust_struct = rust.RustStruct(data="some data", vector=[255, 255, 255])
+
+# Calling some methods on the struct:
+rust_struct.extend_vector([1, 1, 1, 1])
+rust_struct.printer()
 
 
 # sending over a Pydantic basemodel:
@@ -114,7 +118,7 @@ class Human(BaseModel):
 jan = Human(name="Jan", age=6)
 rust.human_says_hi(jan.json())
 
-# logging example:
+# Have Rust use the Python logger:
 import logging
 
 FORMAT = "%(levelname)s %(name)s %(asctime)-15s %(filename)s:%(lineno)d %(message)s"
@@ -124,8 +128,7 @@ logging.info("Logging from the Python code")
 rust.log_example()
 rust.log_different_levels()
 
-# Exception handling example:
-
+# 'handle' a Rust error in Python by catching the exception:
 print(rust.greater_than_2(3))
 try:
     print(rust.greater_than_2(1))

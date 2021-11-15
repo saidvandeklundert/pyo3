@@ -188,7 +188,7 @@ pub struct RustStruct {
 #[pymethods]
 impl RustStruct {
     #[new]
-    pub fn new(data: String, mut vector: Vec<u8>) -> RustStruct {
+    pub fn new(data: String, vector: Vec<u8>) -> RustStruct {
         RustStruct { data, vector }
     }
     pub fn printer(&self) {

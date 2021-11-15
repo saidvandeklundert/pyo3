@@ -53,7 +53,11 @@ def count_occurences(contents: str, needle: str) -> int:
     return total
 
 
-text = """🐍 searches through the words. Here are some additional words for 🐍.""" * 1000
+text = (
+    """🐍 searches through the words. Here are some additional words for 🐍.\n""" * 1000
+)
+
+
 res = count_occurences(text, "words")
 print("count_occurences for 'words' in Python:", res)
 

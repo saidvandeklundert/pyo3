@@ -43,6 +43,21 @@ try:
 except TypeError as e:
     print(f"Caught a type error: {e}")
 
+# count occurrences of a word in a string:
+
+
+def count_occurences(contents: str, needle: str) -> int:
+    """Example provided by David, core maintainer of pyo3:
+    https://youtu.be/-XyWG_klSAw?t=1558
+    """
+    total = 0
+
+    for line in contents.splitlines():
+        for word in line.split(" "):
+            if word == needle:
+                total += 1
+    return total
+
 
 # Calculating fibonacci
 from fib import get_fibonacci
@@ -64,7 +79,7 @@ ru_start = timer()
 for i in range(999):
     rust.get_fibonacci(150)
 ru_res = rust.get_fibonacci(150)
-ru_elapsed = round(timer() - ru_start, 3)
+ru_elapsed = round(timer() - ru_start, 5)
 print("Calculating the 150th fibonacci number 1000 times.")
 print(f"Python took {py_elapsed} seconds and got:\t{py_res}.")
 print(f"Rust took {ru_elapsed} seconds and got:\t{ru_res}.")

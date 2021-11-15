@@ -70,6 +70,21 @@ fn array_printer(a: [String; 8]) {
     }
 }
 
+/*
+Example provided by David, core maintainer of pyo3:
+    https://youtu.be/-XyWG_klSAw?t=1558
+*/
+fn count_occurences(contents: &str, needle: &str) -> usize {
+    let mut count = 0;
+    for line in contents.lines() {
+        for word in line.split(" ") {
+            if word == needle {
+                count += 1;
+            }
+        }
+    }
+    count
+}
 /// Formats the sum of two numbers as string.
 #[pyfunction]
 fn sum_as_string(a: usize, b: usize) -> PyResult<String> {
@@ -206,6 +221,7 @@ fn rust(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(list_printer, m)?)?;
     m.add_function(wrap_pyfunction!(dict_printer, m)?)?;
     m.add_function(wrap_pyfunction!(array_printer, m)?)?;
+    m.add_function(wrap_pyfunction!(count_occurences, m)?)?;
     m.add_function(wrap_pyfunction!(human_says_hi, m)?)?;
     m.add_wrapped(wrap_pyfunction!(log_example))?;
     m.add_wrapped(wrap_pyfunction!(log_different_levels))?;

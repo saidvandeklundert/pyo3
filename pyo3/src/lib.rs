@@ -70,20 +70,9 @@ fn array_printer(a: [String; 8]) {
     }
 }
 
-/*
-Example provided by David, core maintainer of pyo3:
-    https://youtu.be/-XyWG_klSAw?t=1558
-*/
 #[pyfunction]
 fn count_occurences(contents: &str, needle: &str) -> usize {
-    let mut count = 0;
-    for line in contents.lines() {
-        for word in line.split(" ") {
-            if word == needle {
-                count += 1;
-            }
-        }
-    }
+    let count = contents.matches(needle).count();
     count
 }
 /// Formats the sum of two numbers as string.

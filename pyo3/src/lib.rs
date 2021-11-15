@@ -70,10 +70,6 @@ fn array_printer(a: [String; 8]) {
     }
 }
 
-/*
-Example provided by David, core maintainer of pyo3:
-    https://youtu.be/-XyWG_klSAw?t=1558
-*/
 #[pyfunction]
 fn count_occurences(contents: &str, needle: &str) -> usize {
     let mut count = 0;

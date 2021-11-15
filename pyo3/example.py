@@ -53,7 +53,7 @@ def count_occurences(contents: str, needle: str) -> int:
     total = 0
 
     for line in contents.splitlines():
-        for word in line.split(" "):
+        for word in line.split():
             if word == needle:
                 total += 1
     return total

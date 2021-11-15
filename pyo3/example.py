@@ -51,7 +51,6 @@ def count_occurences(contents: str, needle: str) -> int:
     https://youtu.be/-XyWG_klSAw?t=1558
     """
     total = 0
-
     for line in contents.splitlines():
         for word in line.split():
             if word == needle:

@@ -78,7 +78,7 @@ Example provided by David, core maintainer of pyo3:
 fn count_occurences(contents: &str, needle: &str) -> usize {
     let mut count = 0;
     for line in contents.lines() {
-        for word in line.split(" ") {
+        for word in line.split(" |.") {
             if word == needle {
                 count += 1;
             }

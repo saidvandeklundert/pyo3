@@ -89,15 +89,13 @@ for i in range(10):
 
 
 py_start = timer()
-for i in range(999):
-    res = get_fibonacci(150)
-    print(res)
+for i in range(149):
+    get_fibonacci(i)
 py_res = get_fibonacci(150)
 py_elapsed = round(timer() - py_start, 3)
 ru_start = timer()
-for i in range(999):
-    res = rust.get_fibonacci(150)
-    print(res)
+for i in range(149):
+    rust.get_fibonacci(i)
 ru_res = rust.get_fibonacci(150)
 ru_elapsed = round(timer() - ru_start, 5)
 print("Calculating the 150th fibonacci number 1000 times.")

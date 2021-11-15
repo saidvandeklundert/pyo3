@@ -93,7 +93,7 @@ for i in range(999):
     get_fibonacci(150)
 
 py_res = get_fibonacci(150)
-py_elapsed = round(timer() - py_start, 3)
+py_elapsed = round(timer() - py_start, 5)
 ru_start = timer()
 for i in range(999):
     rust.get_fibonacci(150)

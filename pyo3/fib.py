@@ -1,4 +1,4 @@
-def get_fibonacci(n):
+def get_fibonacci(n: int) -> int:
     """Get the nth fibonacci number."""
     fib_seq = [0]
     while n > 0:

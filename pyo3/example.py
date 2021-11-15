@@ -61,10 +61,10 @@ def count_occurences(contents: str, needle: str) -> int:
 
 text = """A word is a word."""
 res = count_occurences(text, "word")
-print(res)
+print("count_occurences", res)
 
 rust_res = rust.count_occurences(text, "word")
-print(rust_res)
+print("count_occurences", rust_res)
 
 # Calculating fibonacci
 from fib import get_fibonacci

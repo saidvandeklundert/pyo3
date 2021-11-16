@@ -1,4 +1,4 @@
-import rust
+import yolo
 
-result = rust.multiply(2, 3)
+result = yolo.multiply(2, 3)
 print(result)

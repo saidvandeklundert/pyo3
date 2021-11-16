@@ -1,4 +1,4 @@
-import rusty
+import rust
 
-result = rusty.multiply(2, 3)
+result = rust.multiply(2, 3)
 print(result)

@@ -1,4 +1,4 @@
-import testing
+import rust
 
-result = testing.multiply(2, 3)
+result = rust.multiply(2, 3)
 print(result)

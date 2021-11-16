@@ -6,7 +6,7 @@ fn multiply(a: isize, b: isize) -> PyResult<isize> {
 }
 
 #[pymodule]
-fn rust(_py: Python, m: &PyModule) -> PyResult<()> {
+fn yolo(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(multiply, m)?)?;
     Ok(())
 }

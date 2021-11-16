@@ -7,8 +7,16 @@ result = rust.multiply(2, 3)
 print(result)
 
 # sum of list of numbers:
+def sum_list(numbers: list) -> int:
+    total = 0
+    for number in numbers:
+        total += number
+    return total
+
+
 result = rust.list_sum([10, 10, 10, 10, 10])
 print(result)
+
 
 # Working with different types:
 

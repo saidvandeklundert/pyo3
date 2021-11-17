@@ -27,11 +27,10 @@ cd /opt/pyo3/pyo3
 python3 -m venv /opt/venv
 . /opt/venv/bin/activate
 maturin develop
-.. This takes a looooooong time at first, probably due to cargo update
 python example.py
 ```
 
-Running `maturin develop --release` takes a very long time when you first run it. After that, changes are incremental and build times are typically just a few seconds.
+Running `maturin develop --release` takes a very long time (about 15 minutes!) when you first run it. The cargo update and the first build are painfully slow. After the first time, changes are incremental and build times are typically just a few seconds.
 
 After updating the code, you can do the following to work with the updates that you made:
 

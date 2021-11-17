@@ -31,7 +31,9 @@ maturin develop
 python example.py
 ```
 
-After updating the code sample:
+Running `maturin develop --release` takes a very long time when you first run it. After that, changes are incremental and build times are typically just a few seconds.
+
+After updating the code, you can do the following to work with the updates that you made:
 
 ```
 git pull

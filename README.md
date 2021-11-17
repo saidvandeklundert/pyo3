@@ -12,16 +12,11 @@ Notes on setting things up can be found [here](https://github.com/PyO3/pyo3) or 
 
 
 
-Using this repo as an example:
+To play with the code:
 
 ```
-docker build ./ -t pyo3_example
- <omitted>
- [+] Building 7.5s (12/12) FINISHED
- <omitted>
-
+docker build ./ -t pyo3_example 
 docker run --name='pyo3_example' --hostname='pyo3_example' -di pyo3_example:latest
-
 docker exec -it pyo3_example bash
 cd /opt/pyo3/pyo3
 python3 -m venv /opt/venv

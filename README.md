@@ -15,6 +15,8 @@ Notes on setting things up can be found [here](https://github.com/PyO3/pyo3) or 
 To play with the code:
 
 ```
+git clone https://github.com/saidvandeklundert/pyo3.git
+cd pyo3
 docker build ./ -t pyo3_example 
 docker run --name='pyo3_example' --hostname='pyo3_example' -di pyo3_example:latest
 docker exec -it pyo3_example bash

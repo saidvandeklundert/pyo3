@@ -182,7 +182,9 @@ fn greater_than_2(number: isize) -> Result<isize, MyError> {
 
 #[pyclass]
 pub struct RustStruct {
+    #[pyo3(get, set)]
     pub data: String,
+    #[pyo3(get, set)]
     pub vector: Vec<u8>,
 }
 #[pymethods]

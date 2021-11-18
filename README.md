@@ -1,7 +1,7 @@
 ## PyO3 examples
 
 <p align="center">
-  <img src="https://github.com/saidvandeklundert/pyo3/blob/main/img/pyo3.png">
+  <img width="50%" height="50%" src="https://github.com/saidvandeklundert/pyo3/blob/main/img/pyo3.png">
 </p>
 
 The `lib.rs`, found [here](https://github.com/saidvandeklundert/pyo3/blob/main/pyo3/src/lib.rs), contains example code that is being called from a Python script found [here](https://github.com/saidvandeklundert/pyo3/blob/main/pyo3/example.py). The Rust examples include:

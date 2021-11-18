@@ -1,5 +1,8 @@
 ## PyO3 examples
 
+<p align="center">
+  <img width="20%" height="20%" src="https://github.com/saidvandeklundert/pyo3/blob/main/img/pyo3.png">
+</p>
 
 The Rust examples, found [here](https://github.com/saidvandeklundert/pyo3/blob/main/pyo3/src/lib.rs), include:
 - calculate the n-th Fibonacci in Python as well as in Rust
@@ -11,10 +14,6 @@ The Rust examples, found [here](https://github.com/saidvandeklundert/pyo3/blob/m
 
 The Rust code is being called from a Python script found [here](https://github.com/saidvandeklundert/pyo3/blob/main/pyo3/example.py). 
 
-
-<p align="center">
-  <img width="25%" height="25%" src="https://github.com/saidvandeklundert/pyo3/blob/main/img/pyo3.png">
-</p>
 
 Notes on setting things up can be found [here](https://github.com/PyO3/pyo3) or [here](https://pyo3.rs/v0.15.0/). Alternatively, follow below to run everything in a Docker container.
 

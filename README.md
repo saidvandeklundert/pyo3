@@ -1,10 +1,7 @@
 ## PyO3 examples
 
-<p align="center">
-  <img width="25%" height="25%" src="https://github.com/saidvandeklundert/pyo3/blob/main/img/pyo3.png">
-</p>
 
-The `lib.rs`, found [here](https://github.com/saidvandeklundert/pyo3/blob/main/pyo3/src/lib.rs), contains example code that is being called from a Python script found [here](https://github.com/saidvandeklundert/pyo3/blob/main/pyo3/example.py). The Rust examples include:
+The Rust examples, found [here](https://github.com/saidvandeklundert/pyo3/blob/main/pyo3/src/lib.rs), include:
 - calculate the n-th Fibonacci in Python as well as in Rust
 - having Python use a variety of types in Rust functions
 - using a Rust struct in Python code
@@ -12,11 +9,17 @@ The `lib.rs`, found [here](https://github.com/saidvandeklundert/pyo3/blob/main/p
 - allow Rust to use the logger from the Python runtime
 - generating an Error in Rust and catching it as an exception in Python
 
-Notes on setting things up can be found [here](https://github.com/PyO3/pyo3) or [here](https://pyo3.rs/v0.15.0/).
+The Rust code is being called from a Python script found [here](https://github.com/saidvandeklundert/pyo3/blob/main/pyo3/example.py). 
 
 
+<p align="center">
+  <img width="25%" height="25%" src="https://github.com/saidvandeklundert/pyo3/blob/main/img/pyo3.png">
+</p>
+
+Notes on setting things up can be found [here](https://github.com/PyO3/pyo3) or [here](https://pyo3.rs/v0.15.0/). Alternatively, follow below to run everything in a Docker container.
 
 ## To play with the code:
+
 
 
 ```

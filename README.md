@@ -1,5 +1,6 @@
 ## PyO3 examples
 
+This repo accompanies [this](https://saidvandeklundert.net/learn/2021-11-18-calling-rust-from-python-using-pyo3/) blog post.
 
 The Rust examples, found [here](https://github.com/saidvandeklundert/pyo3/blob/main/pyo3/src/lib.rs), include:
 - calculate the n-th Fibonacci in Python as well as in Rust

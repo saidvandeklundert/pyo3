@@ -1,9 +1,5 @@
 ## PyO3 examples
 
-<div style="text-align:center">
-![PyO3 logo](https://github.com/saidvandeklundert/learn/blob/pyo3_post/img/pyo3_small.png "PyO3 logo")
-</div>
-
 <p align="center">
   <img src="https://github.com/saidvandeklundert/pyo3/blob/main/img/pyo3.png">
 </p>

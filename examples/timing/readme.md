@@ -1,0 +1,1 @@
+Script that shows how long it takes to call a Rust function from Python.

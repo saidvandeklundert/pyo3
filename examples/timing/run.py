@@ -33,16 +33,44 @@ print(
 """
 )
 
+# big input data:
 
 big_list = [x for x in range(100000000)]
+
+
+def list_sum(a: list[int]):
+    """
+    Calculates the sum for all the integers in the list.
+
+    Equivalent to the list_sum in the Rust library, written like so:
+
+    fn list_sum(a: Vec<isize>) -> PyResult<isize> {
+        let mut sum: isize = 0;
+        for i in a {
+            sum += i;
+        }
+        Ok(sum)
+    }
+    """
+    total_sum = 0
+    for i in a:
+        total_sum += i
+
+    return total_sum
+
 
 start = timer()
 timing_example.list_sum(big_list)
 calling_rust_list_sum = round(timer() - start, 5)
 
+start = timer()
+list_sum(big_list)
+calling_python_list_sum = round(timer() - start, 5)
+
 print(
     f"""
 {function_calls} to the Rust 'timing_example.list_sum' function:\t{calling_rust_list_sum} 
+{function_calls} to the Python 'list_sum' function:\t{calling_python_list_sum} 
 
 """
 )

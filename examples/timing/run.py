@@ -32,3 +32,17 @@ print(
 {function_calls} to the Python 'multiply' function:\t\t\t{calling_python_function}
 """
 )
+
+
+big_list = [x for x in range(100000000)]
+
+start = timer()
+timing_example.list_sum(big_list)
+calling_rust_list_sum = round(timer() - start, 5)
+
+print(
+    f"""
+{function_calls} to the Rust 'timing_example.list_sum' function:\t{calling_rust_list_sum} 
+
+"""
+)

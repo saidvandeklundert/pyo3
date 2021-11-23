@@ -28,7 +28,7 @@ calling_python_function = round(timer() - start, 5)
 
 print(
     f"""
-{function_calls} to the Rust 'timing_example.multiply' function:\t\t{calling_rust_function} 
+{function_calls} to the Rust 'timing_example.multiply' function:\t{calling_rust_function} 
 {function_calls} to the Python 'multiply' function:\t\t\t{calling_python_function}
 """
 )

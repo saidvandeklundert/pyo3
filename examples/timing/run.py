@@ -70,9 +70,9 @@ def time_list_sum_calls(input_list_size: int):
     print(
         f"""
     Argument size set to {input_list_size}.
-    
-    Calling the Rust 'timing_example.list_sum' function:\t{calling_rust_list_sum} 
-    Calling to the Python 'list_sum' function:\t\t{calling_python_list_sum} 
+
+    \tRust 'timing_example.list_sum' function:\t{calling_rust_list_sum} 
+    \tPython 'list_sum' function:\t\t{calling_python_list_sum} 
     """
     )
 

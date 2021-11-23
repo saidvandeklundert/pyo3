@@ -35,8 +35,6 @@ print(
 
 # big input data:
 
-big_list = [x for x in range(100000000)]
-
 
 def list_sum(a: list[int]):
     """
@@ -59,18 +57,28 @@ def list_sum(a: list[int]):
     return total_sum
 
 
-start = timer()
-timing_example.list_sum(big_list)
-calling_rust_list_sum = round(timer() - start, 5)
+def time_list_sum_calls(input_list_size: int):
+    input_list = [x for x in range(input_list_size)]
+    start = timer()
+    timing_example.list_sum(input_list)
+    calling_rust_list_sum = round(timer() - start, 5)
 
-start = timer()
-list_sum(big_list)
-calling_python_list_sum = round(timer() - start, 5)
+    start = timer()
+    list_sum(input_list)
+    calling_python_list_sum = round(timer() - start, 5)
 
-print(
-    f"""
-{function_calls} to the Rust 'timing_example.list_sum' function:\t{calling_rust_list_sum} 
-{function_calls} to the Python 'list_sum' function:\t{calling_python_list_sum} 
+    print(
+        f"""
+    {function_calls} to the Rust 'timing_example.list_sum' function:\t{calling_rust_list_sum} 
+    {function_calls} to the Python 'list_sum' function:\t\t{calling_python_list_sum} 
 
-"""
-)
+    """
+    )
+
+
+time_list_sum_calls(1000)
+time_list_sum_calls(10000)
+time_list_sum_calls(100000)
+time_list_sum_calls(1000000)
+time_list_sum_calls(10000000)
+time_list_sum_calls(100000000)

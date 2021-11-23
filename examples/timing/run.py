@@ -26,10 +26,11 @@ for _ in range(function_calls):
 calling_python_function = round(timer() - start, 5)
 
 
-print(calling_rust_function, calling_python_function)
-f"""Made {function_calls} to multiply in Rust as well as in Python.
+print(
+    f"""Made {function_calls} to multiply in Rust as well as in Python.
 
 Time spend calling the Rust function: {calling_rust_function}
 
 Time spend calling the Python function: {calling_python_function}
 """
+)
